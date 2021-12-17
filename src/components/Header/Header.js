@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import { COLORS, WEIGHTS } from "../../constants";
 
-import { COLORS, WEIGHTS } from '../../constants';
-import Logo from '../Logo';
-import SuperHeader from '../SuperHeader';
+import Logo from "../Logo";
+import React from "react";
+import SuperHeader from "../SuperHeader";
+import styled from "styled-components/macro";
 
 const Header = () => {
   // Our site features two visual headers, but they should be
@@ -29,9 +29,16 @@ const Header = () => {
 const MainHeader = styled.div`
   padding: 0 32px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  display: flex;
+  height: 72px;
+  align-items: center;
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  display: flex;
+  gap: 48px;
+  margin: 0 auto;
+`;
 
 const NavLink = styled.a`
   font-size: 1.125rem;
